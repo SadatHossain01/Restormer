@@ -7,4 +7,7 @@
 *.mat
 *.npy
 .DS_Store
-
+*.log
+tb_logger/*
+Denoising/Datasets/Downloads/zhanglab/1/NOISY_SRGB_010.PNG
+Denoising/Datasets/Downloads/zhanglab/1/GT_SRGB_010.PNG

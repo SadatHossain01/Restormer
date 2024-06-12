@@ -3,7 +3,7 @@
 *.png
 *.tif
 *.jpg
-*.pth
+# *.pth
 *.mat
 *.npy
 .DS_Store

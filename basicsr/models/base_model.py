@@ -49,7 +49,7 @@ class BaseModel():
             return self.dist_validation(dataloader, current_iter, tb_logger, save_img, rgb2bgr, use_image)
         else:
             return self.nondist_validation(dataloader, current_iter, tb_logger,
-                                    save_img, rgb2bgr, use_image)
+                                           save_img, rgb2bgr, use_image)
 
     def model_ema(self, decay=0.999):
         net_g = self.get_bare_model(self.net_g)
@@ -241,6 +241,7 @@ class BaseModel():
                 state_dict[key] = param.cpu()
             save_dict[param_key_] = state_dict
 
+        logger.info(f'Saving model at {save_path}')
         torch.save(save_dict, save_path)
 
     def _print_different_keys_loading(self, crt_net, load_net, strict=True):

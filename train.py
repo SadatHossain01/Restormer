@@ -96,9 +96,6 @@ def create_train_val_dataloader(opt, logger):
                 sampler=train_sampler,
                 seed=opt['manual_seed'])
 
-            print(
-                f'Train Set Length: {len(train_set)}, dataset_enlarge_ratio: {dataset_enlarge_ratio}, batch_size_per_gpu: {dataset_opt["batch_size_per_gpu"]}, world_size: {opt["world_size"]}')
-
             num_iter_per_epoch = math.ceil(
                 len(train_set) * dataset_enlarge_ratio /
                 (dataset_opt['batch_size_per_gpu'] * opt['world_size']))
